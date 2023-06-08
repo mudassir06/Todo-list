@@ -9,8 +9,8 @@
   text-align: center;
 }
 .center_div{
-  width: 25%;
-  border-radius: 20px;
+  width: 30%;
+  border-radius: 31px 0 43px 0px;
   height: 80vh;
   background-color: #f4f4f4;
   box-shadow: 5px 5px -5px rgba(0,0,0,0.5);
@@ -46,7 +46,7 @@ button{
   border: none;
   margin-left: 10px;
   box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3);
-  font-size: 40px;
+  font-size: 17px;
 }
 button:hover{
   background-color: aqua;
@@ -55,7 +55,7 @@ ol {
   margin-top: 30px;
 }
 ol li{
-  padding-left: 0px;
+  padding-left: 12px;
   text-align: left;
   font-size: 20px;
   font-weight: 500;
@@ -86,3 +86,4 @@ ol li{
 .todo_style .fa-times:hover{
   background-color: rgb(222, 119, 29);
 }
+
