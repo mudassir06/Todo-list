@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ToDoLists from "./components/ToDoLists";
 import FontAwesomeExample from "./components/FontAwesomeExample";
+import ArrayUseState from "./components/ArrayUseState";
 const App = () => {
   const [inputList, SetInputList] = useState(" ");
   console.log(inputList);
@@ -10,11 +11,17 @@ const App = () => {
   const itemEvent = (event) => {
     SetInputList(event.target.value);
   };
+  // const listOfItems = () => {
+  //   SetItems((oldItems) => {
+  //     //(oldItems) access object or Array both.
+  //     return [...oldItems, inputList];
+  //   })
+  //   SetInputList("");
+  // };
   const listOfItems = () => {
-    SetItems((oldItems) => {
-      //(oldItems) access object or Array both.
-      return [...oldItems, inputList];
-    })
+    if (inputList.trim() !== "") { // Check if inputList is not empty or only contains whitespace
+      SetItems((oldItems) => [...oldItems, inputList]);
+    }
     SetInputList("");
   };
   const DeleteItems=(id)=>{
@@ -26,6 +33,7 @@ const App = () => {
     })
   }
   return (
+    <>
     <div className="main_div">
       <div className="center_div">
         <br />
@@ -54,8 +62,10 @@ const App = () => {
           })}
         </ol>
     <FontAwesomeExample/>
+    {/* <ArrayUseState/> Array with UseState  */}
       </div>
     </div>
+    </>
   );
 };
 
